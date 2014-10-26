@@ -25,3 +25,29 @@ function add($a, $b)
 {
     return $a + $b;
 }
+
+/**
+ * Returns the fibonnacci corresponding to a given number
+ *
+ * @param  int $num Number
+ * @return int      The fibonacci corresponding to $num
+ */
+function fibonacci($num)
+{
+    if ($num <= 1)
+        return 1;
+
+    return (fibonacci($num - 1) + fibonacci($num - 2));
+}
+
+/**
+ * Returns true if a given number is pair
+ *
+ * @param  int $num Number
+ * @return boolean  Is pair
+ */
+function evenValued($num)
+{
+    return ($num % 2 === 0);
+}
+
