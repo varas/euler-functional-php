@@ -37,6 +37,14 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse(evenValued(11));
     }
 
+    public function testAdd()
+    {
+        $this->assertEquals(0, add(0,0));
+        $this->assertEquals(1, add(0,1));
+        $this->assertEquals(2, add(1,1));
+        $this->assertEquals(22, add(12,10));
+    }
+
     public function testPrimeFactors()
     {
         $this->assertEquals(2, maxPrimeFactor(4));
