@@ -51,3 +51,28 @@ function evenValued($num)
     return ($num % 2 === 0);
 }
 
+/**
+ * Returns the max prime that is factor of a given number
+ *
+ * @param  int $num Number greater than 1
+ * @return int      Max prime factor of $num
+ */
+function maxPrimeFactor($num)
+{
+    $maxPrimeFactor = null;
+    $i = 2;
+
+    // iterate numbers
+    while($i <= $num) {
+        // iterate factors
+        while ($num % $i == 0) {
+            $maxPrimeFactor = $i;
+            // decrement limit
+            // no need to check for higher
+            $num = $num / $i;
+        }
+        $i++;
+    }
+
+    return $maxPrimeFactor;
+}
