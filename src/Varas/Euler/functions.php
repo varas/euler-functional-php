@@ -76,3 +76,33 @@ function maxPrimeFactor($num)
 
     return $maxPrimeFactor;
 }
+
+function cartesianProduct($set)
+{
+        if (!$set) {
+            return [[]];
+        }
+
+        $subset = array_shift($set);
+        $cartesianSubset = cartesianProduct($set);
+
+        $result = array();
+        foreach ($subset as $value) {
+            foreach ($cartesianSubset as $p) {
+                array_unshift($p, $value);
+                $result[] = $p;
+            }
+        }
+
+        return $result;
+}
+
+function productBidimentinalArray($array)
+{
+    return $array[0] * $array[1];
+}
+
+function isPalindrome($string)
+{
+    return $string == strrev($string);
+}

@@ -52,4 +52,50 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(7, maxPrimeFactor(14));
         $this->assertEquals(7, maxPrimeFactor(35));
     }
+
+    public function testCartesianProductWithOneItems()
+    {
+        $arrayA = ['a'];
+        $arrayB = ['b'];
+        $expected = ['a','b'];
+
+        $this->assertContains($expected, cartesianProduct([$arrayA, $arrayB]));
+    }
+
+    public function testCartesianProductWithSeveralItems()
+    {
+        $arrayA = ['a','b'];
+        $arrayB = ['1','2'];
+        $expected = [   ['a','1'],
+                        ['a','2'],
+                        ['b','1'],
+                        ['b','2']
+                    ];
+
+        $result = cartesianProduct([$arrayA, $arrayB]);
+
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testProductBidimentionalArray()
+    {
+        $input = [  [1,1],
+                    [2,2],
+                 ];
+        $expected = [1,4];
+
+        $result = array_map('Varas\Math\productBidimentinalArray', $input);
+
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testIsPalindrome()
+    {
+        $this->assertTrue(isPalindrome(0));
+        $this->assertTrue(isPalindrome(11));
+        $this->assertTrue(isPalindrome(101));
+        $this->assertTrue(isPalindrome('101'));
+        $this->assertFalse(isPalindrome(13));
+        $this->assertFalse(isPalindrome(491));
+    }
 }
