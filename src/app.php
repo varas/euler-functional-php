@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$problemNumbers = [1, 2];
+$problemNumbers = [1, 2, 3, 4];
 
 $problemFactory = function($problemNumber) {
     $problemClass = 'Varas\Euler\Problem'.$problemNumber;
