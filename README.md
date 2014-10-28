@@ -10,7 +10,7 @@ As PHP 5.6 places functions as first class citizens, it should be used to import
 with `use funtion` the math functions.
 
 Each function is covered by tests and each problem uses a test based on the problem
-statement to give test feedback.
+statement to give test feedback and ensure algorithm validaton.
 
 ## Requirements
 
@@ -20,7 +20,9 @@ statement to give test feedback.
 
 CLI runner:
 
-    php src/app.php
+    php -dmemory_limit=1G src/app.php
+
+Requires increasing php `memory_limit` (php arrays...) and takes its time.
 
 ## Tests
 
