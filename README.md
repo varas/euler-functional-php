@@ -38,6 +38,29 @@ Show specification tests break down run
 
     bin/phpunit --testdox
 
+        Varas\Math\Functions
+         [x] Is multiple of 3or 5
+         [x] Fibonacci
+         [x] Even valued
+         [x] Add
+         [x] Prime factors
+         [x] Cartesian product with one items
+         [x] Cartesian product with several items
+         [x] Product bidimentional array
+         [x] Is palindrome
+
+        Varas\Euler\Problem1
+         [x] Solve
+
+        Varas\Euler\Problem2
+         [x] Solve
+
+        Varas\Euler\Problem3
+         [x] Solve
+
+        Varas\Euler\Problem4
+         [x] Solve
+
 Show execution times for tests
 
 *Handy when developing diferent approaches*
