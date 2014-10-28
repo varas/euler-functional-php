@@ -7,10 +7,10 @@ when needed solve the problems. In the case there is an evident (php) functional
 that will be used.
 
 As PHP 5.6 places functions as first class citizens, it should be used to import
-with `use funtion` the algorithms.
+with `use funtion` the math functions.
 
 Each function is covered by tests and each problem uses a test based on the problem
-specification to give feedback.
+statement to give test feedback.
 
 ## Requirements
 
