@@ -45,7 +45,7 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(22, add(12,10));
     }
 
-    public function testPrimeFactors()
+    public function testMaxPrimeFactor()
     {
         $this->assertEquals(2, maxPrimeFactor(4));
         $this->assertEquals(3, maxPrimeFactor(6));
@@ -97,5 +97,40 @@ class FunctionsTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(isPalindrome('101'));
         $this->assertFalse(isPalindrome(13));
         $this->assertFalse(isPalindrome(491));
+    }
+
+    public function testIsPrime()
+    {
+        $this->assertFalse(isPrime(1));
+        $this->assertTrue (isPrime(2));
+        $this->assertTrue (isPrime(3));
+        $this->assertFalse(isPrime(4));
+        $this->assertTrue (isPrime(5));
+        $this->assertFalse(isPrime(6));
+        $this->assertTrue (isPrime(7));
+        $this->assertFalse(isPrime(8));
+        $this->assertFalse(isPrime(9));
+        $this->assertFalse(isPrime(10));
+        $this->assertTrue (isPrime(11));
+    }
+
+    public function testLeastCommonMultiple()
+    {
+        $this->assertEquals(6,  leastCommonMultiple(2,3));
+        $this->assertEquals(36, leastCommonMultiple(12,18));
+        $this->assertEquals(42, leastCommonMultiple(21,6));
+    }
+
+    public function testLeastCommonMultipleAsPredicate()
+    {
+        $arr = [2,3];
+        $this->assertEquals(6, array_reduce($arr, 'Varas\Math\leastCommonMultiple', 1));
+    }
+
+    public function testGreatestCommonDivisor()
+    {
+        $this->assertEquals(1, greatestCommonDivisor(1,3));
+        $this->assertEquals(4, greatestCommonDivisor(12,8));
+        $this->assertEquals(5, greatestCommonDivisor(10,15));
     }
 }

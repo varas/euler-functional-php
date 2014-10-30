@@ -10,6 +10,6 @@ class Problem3Test extends \PHPUnit_Framework_TestCase
     public function testSolve()
     {
         $sut = new Problem3();
-        $this->assertEquals($sut->solve(self::$input), self::$expectedOutput);
+        $this->assertEquals(self::$expectedOutput, $sut->solve(self::$input));
     }
 }

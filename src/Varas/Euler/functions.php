@@ -106,3 +106,45 @@ function isPalindrome($string)
 {
     return $string == strrev($string);
 }
+
+function isPrime($num)
+{
+    if($num == 1)
+        return false;
+
+    if($num == 2)
+        return true;
+
+    // improve for large pair nums
+    if($num % 2 == 0) {
+        return false;
+    }
+
+    // test odd numbers
+    for($i = 3; $i <= ceil(sqrt($num)); $i = $i + 2) {
+        if($num % $i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+function leastCommonMultiple($a, $b)
+{
+    if ($a == 0 || $b == 0)
+        return 0;
+
+    $r = ($a * $b) / greatestCommonDivisor($a, $b);
+
+    return abs($r);
+}
+
+function greatestCommonDivisor($a, $b)
+{
+    while ($b != 0) {
+        $t = $b;
+        $b = $a % $b;
+        $a = $t;
+    }
+    return $a;
+}
