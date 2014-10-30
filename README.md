@@ -33,21 +33,68 @@ Install test framework
 Basic test run
 
     bin/phpunit
+Show execution times for tests
+
+*Handy when developing diferent approaches*
+
+    bin/phpunit -c phpunit-show-times.xml
 
 Show specification tests break down run
 
-    bin/phpunit --testdox
+
+    php -dmemory_limit=1G src/app.php
+
+Requires increasing php `memory_limit` (php arrays...) and takes its time.
+
+## Tests
+
+Install test framework
+
+    composer install
+
+Basic test run
+
+    bin/phpunit
+Show execution times for tests
+
+*Handy when developing diferent approaches*
+
+    bin/phpunit -c phpunit-show-times.xml
+
+
+    php -dmemory_limit=1G src/app.php
+
+Requires increasing php `memory_limit` (php arrays...) and takes its time.
+
+## Tests
+
+Install test framework
+
+    composer install
+
+Basic test run
+
+    bin/phpunit
+Show execution times for tests
+
+*Handy when developing diferent approaches*
+
+    bin/phpunit -c phpunit-show-times.xml
 
         Varas\Math\Functions
          [x] Is multiple of 3or 5
          [x] Fibonacci
          [x] Even valued
          [x] Add
-         [x] Prime factors
+         [x] Max prime factor
          [x] Cartesian product with one items
          [x] Cartesian product with several items
          [x] Product bidimentional array
          [x] Is palindrome
+         [x] Is prime
+         [x] Least common multiple
+         [x] Least common multiple as predicate
+         [x] Greatest common divisor
 
         Varas\Euler\Problem1
          [x] Solve
@@ -61,9 +108,5 @@ Show specification tests break down run
         Varas\Euler\Problem4
          [x] Solve
 
-Show execution times for tests
-
-*Handy when developing diferent approaches*
-
-    bin/phpunit -c phpunit-show-times.xml
-
+        Varas\Euler\Problem5
+         [x] Solve
