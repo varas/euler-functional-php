@@ -77,9 +77,9 @@ Basic test run
     bin/phpunit
 Show execution times for tests
 
-*Handy when developing diferent approaches*
+Specification tests break down run
 
-    bin/phpunit -c phpunit-show-times.xml
+    bin/phpunit --testdox
 
         Varas\Math\Functions
          [x] Is multiple of 3or 5
