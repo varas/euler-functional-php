@@ -75,7 +75,12 @@ Install test framework
 Basic test run
 
     bin/phpunit
+
 Show execution times for tests
+
+*Handy when developing diferent approaches*
+
+    bin/phpunit -c phpunit-show-times.xml
 
 Specification tests break down run
 
